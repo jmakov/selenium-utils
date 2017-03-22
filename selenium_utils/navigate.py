@@ -1,8 +1,4 @@
-import logging
-
 from selenium.webdriver.remote.webdriver import WebDriver
-
-logger = logging.getLogger(__name__)
 
 
 def scroll_to(driver: WebDriver, y: str):
