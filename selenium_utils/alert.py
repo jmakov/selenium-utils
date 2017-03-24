@@ -21,13 +21,18 @@ def wait_until_alert_is_present(driver: WebDriver, wait_seconds=1):
         .until(EC.alert_is_present())
 
 
-def accept_alert(driver: WebDriver) -> bool:
+def accept_alert(driver: WebDriver, accept_alert: bool) -> bool:
     """
     Accepts alert if present.
     """
     try:
         alert = driver.switch_to.alert
-        alert.accept()
+
+        if accept_alert:
+            alert.accept()
+        else:
+            alert.dismiss()
+
         return True
     except exceptions.NoAlertPresentException as e:
         return False
