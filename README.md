@@ -32,4 +32,9 @@ alert.accept_alert(driver, accept_alert=True)
 
 # let's say we opened multiple windows and tabs and want to close all but the current one
 tab.close_all_tabs_except_given(driver, driver.current_window_handle)
+
+# If an element is moving there's a high probability the clicks will miss the element.
+# E.g. if a menu is expanding, we can wait until the animation stops.
+element.wait_until_stops_moving(button_send)
+button_send.click()
 ```
