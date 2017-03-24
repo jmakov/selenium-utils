@@ -7,7 +7,7 @@ from selenium.webdriver.common import action_chains
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-from selenium_util import exception
+from selenium_utils import exception
 
 logger = logging.getLogger(__name__)
 
@@ -137,8 +137,8 @@ def click_on_staleable_element(driver: WebDriver, el_locator, wait_seconds=1):
         try:
             driver.find_element(*el_locator).click()
             break
-        except exceptions.StaleElementReferenceException as err:
-            logger.error(err)
+        except exceptions.StaleElementReferenceException as e:
+            logger.error(str(e))
             time.sleep(0.1)
     else:
         raise exception.ElementNotFound(el_locator)
