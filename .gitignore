@@ -2,10 +2,9 @@ venv
 .idea
 .iml
 .pyc
-.idea
-.pyc
 .pypirc
 dist
 build
 MANIFEST
 .egg-info
+selenium_utils.egg-info/
