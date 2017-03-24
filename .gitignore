@@ -1,4 +1,11 @@
+venv
+.idea
+.iml
+.pyc
 .idea
 .pyc
-venv
 .pypirc
+dist
+build
+MANIFEST
+.egg-info
