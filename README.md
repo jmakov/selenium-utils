@@ -1,4 +1,4 @@
-# Common Python utility functions for dealing with Selenium Webdriver
+# A toolbox for advanced Selenium acrobatics
 
 ## Compatibility
 Because of type hinting is extensively used, only Python 3.5 and above is supported.
