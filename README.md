@@ -1,7 +1,7 @@
 # A toolbox for advanced Selenium acrobatics
 
 ## Compatibility
-Because of type hinting is extensively used, only Python 3.5 and above is supported.
+Because of type hinting is extensively used, only Python 3.5 and above are supported.
 
 ## Examples
 ```python
@@ -28,7 +28,7 @@ screenshot.get_screenshot(driver, "screenshot.png")
 
 # handle expected alert
 alert.wait_until_alert_is_present(driver)
-alert.accept_alert(driver, accept_alert=True)
+alert.handle_alert(driver, accept_alert=True)
 
 # let's say we opened multiple windows and tabs and want to close all but the current one
 tab.close_all_tabs_except_given(driver, driver.current_window_handle)

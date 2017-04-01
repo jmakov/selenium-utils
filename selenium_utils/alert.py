@@ -21,7 +21,7 @@ def wait_until_alert_is_present(driver: WebDriver, wait_seconds=1):
         .until(EC.alert_is_present())
 
 
-def accept_alert(driver: WebDriver, accept_alert: bool) -> bool:
+def handle_alert(driver: WebDriver, accept_alert: bool) -> bool:
     """
     Accepts alert if present.
     """
